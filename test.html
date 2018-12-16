@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+<title>
+Test
+</title>
+<script src="WebGRLC.js"></script>
+</head>
+<body>
+<button onclick="newminer()">New miner</button>
+<button onclick="connect()">Connect</button>
+<span id="hashrate"></span>
+
+<script>
+var miner;
+function newminer() {
+miner = new WebGRLC({proxyUrl: 'ws://webmine.tuxtoke.life:8080/', poolUrl: 'grlcgang.com:3333', username: 'KorkyMonster.testing', password: 'x', authorizationFn: function (success){console.log("Authorization: " + success)}, newJobFn: function(jobId){console.log("New job, id#: " + jobId)}, newDiffFn: function(diff){console.log("Difficulty set to " + diff)} });
+}
+function connect() {
+miner.connect();
+}
+ setInterval(function(){ document.getElementById("hashrate").innerHTML = miner.hashrate; }, 500);
+</script>
+</body>
+</html>
