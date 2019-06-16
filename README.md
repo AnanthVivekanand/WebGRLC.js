@@ -69,9 +69,10 @@ miner.connect();
 `poolUrl`, `username`, and `password` need to filled in with information to connect and authenticate with a mining pool. Typically
 "x" is an appropriate password for most mining pools, but some pools may require a customized password, which is why the option
 exists. Functions should be passed in to `authorizationFn`, `newJobFn`, and `newDiffFn`. For example, you may want to use these options
-to manage a graphical interface. `authorizationFn` will recieve either `true` or `false` representing authorization status with the pool.
-`newJobFn` will recieve either the id of a new job when it is recieved from a mining pool.
-`newDiffFn` will recieve either the difficulty associated with a new job once it is recieved from a mining pool.
+to manage a graphical interface. 
+- `authorizationFn` will recieve either `true` or `false` representing authorization status with the pool.
+- `newJobFn` will recieve either the id of a new job when it is recieved from a mining pool.
+- `newDiffFn` will recieve either the difficulty associated with a new job once it is recieved from a mining pool.
 
 `miner.connect()` should be run to initiate stratum connection.
 
