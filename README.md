@@ -1,5 +1,7 @@
 # WebGRLC.js
 
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/KorkyMonster/WebGRLC.js/graphs/commit-activity)
+
 An easy script to mine Allium-based coins in a web browser.
 
 ## Getting Started
